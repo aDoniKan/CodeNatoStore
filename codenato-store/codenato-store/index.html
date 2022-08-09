@@ -1,0 +1,74 @@
+<!DOCTYPE html> <!-- informa os navegadores que este documento é um html -->
+<html>
+<!-- início do HTML -->
+
+<head>
+    <!-- cabeçalho do HTML -->
+    <link href="css/estilo.css" rel="stylesheet" /> <!-- carrega o css -->
+    <title>CodeNato Store</title> <!-- título da aba -->
+</head>
+
+<body>
+    <!-- corpo do HTML -->
+    <div class="app">
+        <!-- div principal onde começa o aplicativo -->
+        <header class="cabecalho">
+            <!-- cabeçalho -->
+            <img class="logo" src="https://codenato.tech/skin/img/logotipo-codenato-h.png"> <!-- logo da CodeNato -->
+            <h2 class="texto-loja">Store</h2> <!-- acrescenta o texto Store no logo -->
+        </header>
+        <section class="menu-carrinho">
+            <!-- sessão onde começa o conteúdo -->
+            <div class="menu">
+                <!-- lado esquerdo onde fica o menu -->
+                <h2 class="texto-centralizado">Menu</h2> <!-- texto do menu -->
+                <div id="lista-menu">
+                    <!-- onde serão listado os menus -->
+                    <!-- Os items de menu serão incluídos dinamicamente via javascript e ficarão assim:
+                            <div class="item-menu">
+                                <span class="texto-menu">Mouse - R$299</span>
+                                <span class="acao-menu">
+                                    <button class="botao-adicionar" data-produto-id="123" data-acao="adicionar">+</button>
+                                </span>
+                            </div>
+                        -->
+                </div>
+            </div>
+            <div id="carrinho">
+                <!-- lado direito onde fica o carrinho -->
+                <h2 class="texto-centralizado">Carrinho</h2> <!-- texto do carrinho -->
+                <div id="lista-carrinho">
+                    <!-- onde serão listado os items do carrinho -->
+                    <!-- Os items de carrinho serão incluídos dinamicamente via javascript e ficarão assim:
+                                <div class="item-carrinho">
+                                    <span>Mouse</span>
+                                    <span class="quantidade-item">2</span>
+                                    <span class="total-item">R$599</span>
+                                    <span class="acao-menu">
+                                        <button class="botao-adicionar" data-produto-id="123" data-acao="adicionar">-</button>
+                                        <button class="botao-remover" data-produto-id="123" data-acao="remover">-</button>
+                                    </span>
+                                </div>
+                            -->
+                </div>
+                <div class="total-carrinho">
+                    <!-- início de onde nde fica o valor total do carrinho -->
+                    <span>Total</span> <!-- texto total separado do restante para ficar no lado esquedo -->
+                    <span class="total-item">R$<span id="quantidade-total">0</span></span>
+                    <!-- texto restante que ficará do lado direito -->
+                </div>
+            </div>
+        </section>
+        <footer class="rodape texto-centralizado">&copy; Copyright 2022 Code Nato & Nato Academy corporations.</footer>
+        <!-- rodapé do site mostrando os direitos autorais -->
+    </div>
+    <!-- carrega os javascripts somente depois que a página inteira foi carregada -->
+    <script src="js/banco.js"></script> <!-- carrega o arquivo que simula nosso banco de dados -->
+    <script src="js/produto.js"></script> <!-- carrega a classe produto -->
+    <script src="js/carrinho.js"></script> <!-- carrega a classe carrinho -->
+    <script src="js/carrinhoItem.js"></script> <!-- carrega a classe carrinho item -->
+    <script src="js/menu.js"></script> <!-- carrega a classe menu -->
+    <script src="js/app.js"></script> <!-- carrega o script da aplicação -->
+</body>
+
+</html>
